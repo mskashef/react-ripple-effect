@@ -1,0 +1,43 @@
+.RippleEffect__wrapper, .RippleEffect__wrapper * {
+    user-select: none;
+}
+.RippleEffect__wrapper {
+    position: relative;
+    z-index: 1;
+}
+.RippleEffect__ripple {
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background-color: var(--rippleColor);
+    position: absolute;
+    animation: cover var(--duration) ease-in forwards;
+    transform: scale(1);
+    opacity: 1;
+}
+.RippleEffect__ripplesWrapper {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    background-color: transparent;
+    overflow: hidden;
+}
+.RippleEffect__overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+}
+@keyframes cover {
+    to {
+        transform: scale(var(--scale));
+        opacity: 0;
+    }
+}
