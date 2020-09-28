@@ -51,6 +51,10 @@ const RippleEffect = ({children, duration, rippleColor, className, style, ...pro
             <div
                 {...props}
                 className="RippleEffect__overlay"
+                style={{
+                    '--duration': duration + 0.3 + 's',
+                    '--rippleColor': rippleColor
+                }}
                 onMouseDown={handleClick}
                 onClick={props.onClick}
             />

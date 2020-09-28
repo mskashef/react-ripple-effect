@@ -34,6 +34,10 @@
     position: absolute;
     z-index: 1;
     background-color: transparent;
+    transition: all var(--duration);
+}
+.RippleEffect__overlay:active {
+    background-color: var(--rippleColor);
 }
 @keyframes cover {
     to {
